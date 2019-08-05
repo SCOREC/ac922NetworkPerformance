@@ -1,0 +1,4 @@
+stty: standard input: Inappropriate ioctl for device
+ls: cannot access /var/tmp/jsm.lassen710.25395/408119/JSM_rm_port_25395_408119: No such file or directory
+Error: CSM reports jsmd running on host lassen710, but can't locate  there.
+08-01-2019 17:56:57:693 87901 main: Error initializing RM connection. Exiting.

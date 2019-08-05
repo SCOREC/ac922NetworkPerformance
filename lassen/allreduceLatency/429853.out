@@ -1,0 +1,76 @@
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+STARTED: 'jsrun -r 1 -g 4 test_sierra_node -mpi -q' at Wed Jul 31 19:06:09 PDT 2019
+SUCCESS: Returned 0 (all, including MPI, tests passed) at Wed Jul 31 19:06:16 PDT 2019
++ jsrun --tasks_per_rs 1 --nrs 64 --gpu_per_rs 1 --cpu_per_rs 1 '--smpiargs='\''-gpu'\''' /g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce -d cuda
++ set +x
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@lassen710>
+Subject: Job 429853: <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective; module swap cuda cuda/10.1.168; tasks=$((CWS_NODES*4));jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1";mpiArgs="--smpiargs='-gpu'";set -x;jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \;  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out;set +x> in cluster <lassen> Done
+
+Job <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective; module swap cuda cuda/10.1.168; tasks=$((CWS_NODES*4));jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1";mpiArgs="--smpiargs='-gpu'";set -x;jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \;  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out;set +x> was submitted from host <lassen709> by user <smith516> in cluster <lassen> at Wed Jul 31 19:05:37 2019
+Job was executed on host(s) <1*lassen710>, in queue <pbatch0>, as user <smith516> in cluster <lassen> at Wed Jul 31 19:06:05 2019
+                            <40*lassen407>
+                            <40*lassen419>
+                            <40*lassen263>
+                            <40*lassen422>
+                            <40*lassen751>
+                            <40*lassen425>
+                            <40*lassen761>
+                            <40*lassen762>
+                            <40*lassen789>
+                            <40*lassen470>
+                            <40*lassen626>
+                            <40*lassen142>
+                            <40*lassen729>
+                            <40*lassen573>
+                            <40*lassen574>
+                            <40*lassen248>
+</g/g19/smith516> was used as the home directory.
+</g/g19/smith516/develop/osu-micro-benchmarks-5.6.1> was used as the working directory.
+Started at Wed Jul 31 19:06:05 2019
+Terminated at Wed Jul 31 19:06:20 2019
+Results reported at Wed Jul 31 19:06:20 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -W 20
+#BSUB -G ceed
+
+check_sierra_nodes
+
+bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective
+
+module swap cuda cuda/10.1.168
+
+tasks=$((CWS_NODES*4))
+jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1"
+mpiArgs="--smpiargs='-gpu'"
+set -x
+jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \
+  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out
+set +x
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.30 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   15 sec.
+    Turnaround time :                            43 sec.
+
+The output (if any) is above this job summary.
+

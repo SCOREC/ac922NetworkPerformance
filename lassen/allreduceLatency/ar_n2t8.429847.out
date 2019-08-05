@@ -1,0 +1,30 @@
+process_options arg d
+
+# OSU MPI-CUDA Allreduce Latency Test v5.6.1
+# Size       Avg Latency(us)
+4                      57.90
+8                      58.31
+16                     57.74
+32                     57.78
+64                     57.95
+128                    58.21
+256                    58.47
+512                    58.83
+1024                   59.54
+2048                   61.40
+4096                   66.75
+8192                   72.34
+16384                  80.80
+32768                  96.47
+65536                 121.22
+131072                159.73
+262144                216.53
+524288                345.80
+1048576               593.71
+process_options arg d
+process_options arg d
+process_options arg d
+process_options arg d
+process_options arg d
+process_options arg d
+process_options arg d

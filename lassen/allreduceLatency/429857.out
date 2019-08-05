@@ -1,0 +1,325 @@
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+STARTED: 'jsrun -r 1 -g 4 test_sierra_node -mpi -q' at Thu Aug  1 17:56:41 PDT 2019
+FAILED: lassen726  Rank  207 GPU 3: GPU memory used exceeds 0.500 GB threshold!  total 15.750 GB  free 15.223 GB  used 0.527 GB
+--------------------------------------------------------------------------
+MPI_ABORT was invoked on rank 207 in communicator MPI_COMM_WORLD
+with errorcode 1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+FAILED: Returned 1 (including MPI tests) at Thu Aug  1 17:56:56 PDT 2019
++ jsrun --tasks_per_rs 1 --nrs 1024 --gpu_per_rs 1 --cpu_per_rs 1 '--smpiargs='\''-gpu'\''' /g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce -d cuda
++ set +x
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@lassen710>
+Subject: Job 429857: <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective; module swap cuda cuda/10.1.168; tasks=$((CWS_NODES*4));jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1";mpiArgs="--smpiargs='-gpu'";set -x;jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \;  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out;set +x> in cluster <lassen> Done
+
+Job <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective; module swap cuda cuda/10.1.168; tasks=$((CWS_NODES*4));jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1";mpiArgs="--smpiargs='-gpu'";set -x;jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \;  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out;set +x> was submitted from host <lassen709> by user <smith516> in cluster <lassen> at Wed Jul 31 19:05:38 2019
+Job was executed on host(s) <1*lassen710>, in queue <pbatch0>, as user <smith516> in cluster <lassen> at Thu Aug  1 17:56:36 2019
+                            <40*lassen735>
+                            <40*lassen250>
+                            <40*lassen736>
+                            <40*lassen580>
+                            <40*lassen407>
+                            <40*lassen581>
+                            <40*lassen257>
+                            <40*lassen259>
+                            <40*lassen589>
+                            <40*lassen81>
+                            <40*lassen82>
+                            <40*lassen83>
+                            <40*lassen84>
+                            <40*lassen85>
+                            <40*lassen86>
+                            <40*lassen410>
+                            <40*lassen413>
+                            <40*lassen743>
+                            <40*lassen414>
+                            <40*lassen744>
+                            <40*lassen415>
+                            <40*lassen746>
+                            <40*lassen590>
+                            <40*lassen417>
+                            <40*lassen261>
+                            <40*lassen747>
+                            <40*lassen591>
+                            <40*lassen418>
+                            <40*lassen262>
+                            <40*lassen748>
+                            <40*lassen419>
+                            <40*lassen263>
+                            <40*lassen749>
+                            <40*lassen593>
+                            <40*lassen264>
+                            <40*lassen594>
+                            <40*lassen265>
+                            <40*lassen267>
+                            <40*lassen269>
+                            <40*lassen598>
+                            <40*lassen91>
+                            <40*lassen97>
+                            <40*lassen98>
+                            <40*lassen99>
+                            <40*lassen420>
+                            <40*lassen421>
+                            <40*lassen751>
+                            <40*lassen425>
+                            <40*lassen754>
+                            <40*lassen755>
+                            <40*lassen427>
+                            <40*lassen756>
+                            <40*lassen275>
+                            <40*lassen276>
+                            <40*lassen277>
+                            <40*lassen100>
+                            <40*lassen430>
+                            <40*lassen101>
+                            <40*lassen431>
+                            <40*lassen432>
+                            <40*lassen761>
+                            <40*lassen433>
+                            <40*lassen104>
+                            <40*lassen762>
+                            <40*lassen434>
+                            <40*lassen767>
+                            <40*lassen770>
+                            <40*lassen771>
+                            <40*lassen772>
+                            <40*lassen773>
+                            <40*lassen296>
+                            <40*lassen297>
+                            <40*lassen604>
+                            <40*lassen450>
+                            <40*lassen780>
+                            <40*lassen608>
+                            <40*lassen609>
+                            <40*lassen782>
+                            <40*lassen125>
+                            <40*lassen454>
+                            <40*lassen126>
+                            <40*lassen455>
+                            <40*lassen784>
+                            <40*lassen458>
+                            <40*lassen787>
+                            <40*lassen613>
+                            <40*lassen131>
+                            <40*lassen460>
+                            <40*lassen616>
+                            <40*lassen132>
+                            <40*lassen617>
+                            <40*lassen619>
+                            <40*lassen793>
+                            <40*lassen465>
+                            <40*lassen794>
+                            <40*lassen466>
+                            <40*lassen795>
+                            <40*lassen797>
+                            <40*lassen469>
+                            <40*lassen621>
+                            <40*lassen622>
+                            <40*lassen623>
+                            <40*lassen624>
+                            <40*lassen628>
+                            <40*lassen473>
+                            <40*lassen634>
+                            <40*lassen150>
+                            <40*lassen151>
+                            <40*lassen308>
+                            <40*lassen309>
+                            <40*lassen638>
+                            <40*lassen155>
+                            <40*lassen484>
+                            <40*lassen485>
+                            <40*lassen486>
+                            <40*lassen160>
+                            <40*lassen317>
+                            <40*lassen318>
+                            <40*lassen319>
+                            <40*lassen800>
+                            <40*lassen801>
+                            <40*lassen802>
+                            <40*lassen803>
+                            <40*lassen804>
+                            <40*lassen805>
+                            <40*lassen806>
+                            <40*lassen807>
+                            <40*lassen651>
+                            <40*lassen322>
+                            <40*lassen808>
+                            <40*lassen652>
+                            <40*lassen323>
+                            <40*lassen809>
+                            <40*lassen653>
+                            <40*lassen324>
+                            <40*lassen654>
+                            <40*lassen325>
+                            <40*lassen655>
+                            <40*lassen326>
+                            <40*lassen656>
+                            <40*lassen327>
+                            <40*lassen657>
+                            <40*lassen172>
+                            <40*lassen658>
+                            <40*lassen329>
+                            <40*lassen173>
+                            <40*lassen178>
+                            <40*lassen179>
+                            <40*lassen661>
+                            <40*lassen818>
+                            <40*lassen662>
+                            <40*lassen333>
+                            <40*lassen819>
+                            <40*lassen663>
+                            <40*lassen334>
+                            <40*lassen664>
+                            <40*lassen335>
+                            <40*lassen665>
+                            <40*lassen180>
+                            <40*lassen188>
+                            <40*lassen189>
+                            <40*lassen820>
+                            <40*lassen821>
+                            <40*lassen822>
+                            <40*lassen823>
+                            <40*lassen824>
+                            <40*lassen825>
+                            <40*lassen826>
+                            <40*lassen670>
+                            <40*lassen341>
+                            <40*lassen827>
+                            <40*lassen671>
+                            <40*lassen190>
+                            <40*lassen676>
+                            <40*lassen191>
+                            <40*lassen677>
+                            <40*lassen192>
+                            <40*lassen678>
+                            <40*lassen193>
+                            <40*lassen679>
+                            <40*lassen194>
+                            <40*lassen195>
+                            <40*lassen196>
+                            <40*lassen197>
+                            <40*lassen198>
+                            <40*lassen500>
+                            <40*lassen501>
+                            <40*lassen502>
+                            <40*lassen504>
+                            <40*lassen680>
+                            <40*lassen355>
+                            <40*lassen356>
+                            <40*lassen357>
+                            <40*lassen358>
+                            <40*lassen359>
+                            <40*lassen516>
+                            <40*lassen360>
+                            <40*lassen517>
+                            <40*lassen361>
+                            <40*lassen518>
+                            <40*lassen519>
+                            <40*lassen363>
+                            <40*lassen364>
+                            <40*lassen365>
+                            <40*lassen366>
+                            <40*lassen367>
+                            <40*lassen528>
+                            <40*lassen529>
+                            <40*lassen374>
+                            <40*lassen375>
+                            <40*lassen376>
+                            <40*lassen377>
+                            <40*lassen530>
+                            <40*lassen531>
+                            <40*lassen532>
+                            <40*lassen533>
+                            <40*lassen537>
+                            <40*lassen382>
+                            <40*lassen384>
+                            <40*lassen385>
+                            <40*lassen386>
+                            <40*lassen387>
+                            <40*lassen388>
+                            <40*lassen38>
+                            <40*lassen39>
+                            <40*lassen212>
+                            <40*lassen548>
+                            <40*lassen219>
+                            <40*lassen549>
+                            <40*lassen396>
+                            <40*lassen397>
+                            <40*lassen398>
+                            <40*lassen399>
+                            <40*lassen48>
+                            <40*lassen220>
+                            <40*lassen221>
+                            <40*lassen222>
+                            <40*lassen552>
+                            <40*lassen223>
+                            <40*lassen556>
+                            <40*lassen228>
+                            <40*lassen229>
+                            <40*lassen565>
+                            <40*lassen726>
+                            <40*lassen242>
+                            <40*lassen728>
+                            <40*lassen572>
+                            <40*lassen244>
+                            <40*lassen245>
+                            <40*lassen575>
+                            <40*lassen576>
+                            <40*lassen249>
+                            <40*lassen72>
+                            <40*lassen76>
+                            <40*lassen77>
+                            <40*lassen78>
+</g/g19/smith516> was used as the home directory.
+</g/g19/smith516/develop/osu-micro-benchmarks-5.6.1> was used as the working directory.
+Started at Thu Aug  1 17:56:36 2019
+Terminated at Thu Aug  1 17:56:57 2019
+Results reported at Thu Aug  1 17:56:57 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -W 20
+#BSUB -G ceed
+
+check_sierra_nodes
+
+bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective
+
+module swap cuda cuda/10.1.168
+
+tasks=$((CWS_NODES*4))
+jsrArgs="--tasks_per_rs 1 --nrs ${tasks} --gpu_per_rs 1 --cpu_per_rs 1"
+mpiArgs="--smpiargs='-gpu'"
+set -x
+jsrun $jsrArgs $mpiArgs $bin/osu_allreduce -d cuda \
+  &> ar_n${CWS_NODES}t${tasks}.${LSB_JOBID}.out
+set +x
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   3.40 sec.
+    Max Memory :                                 105 MB
+    Average Memory :                             105.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   1356 MB
+    Max Processes :                              7
+    Max Threads :                                31
+    Run time :                                   24 sec.
+    Turnaround time :                            82279 sec.
+
+The output (if any) is above this job summary.
+
