@@ -1,0 +1,75 @@
+stty: standard input: Inappropriate ioctl for device
+stty: standard input: Inappropriate ioctl for device
+STARTED: 'jsrun -r 1 -g 4 test_sierra_node -mpi -q' at Wed Jul 31 11:59:40 PDT 2019
+SUCCESS: Returned 0 (all, including MPI, tests passed) at Wed Jul 31 11:59:44 PDT 2019
++ jsrArgs='--tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40'
++ mpiArgs='--smpiargs='\''-gpu'\'''
++ binArgs='-d cuda'
++ out=nodes1_DD_GPUGPU_429161
++ jsrun --tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40 '--smpiargs='\''-gpu'\''' --latency_priority gpu-gpu --erf_output nodes1_DD_GPUGPU_429161.erf /g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt//osu_latency -d cuda D D
++ out=nodes1_DD_GPUCPU_429161
++ jsrun --tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40 '--smpiargs='\''-gpu'\''' --latency_priority gpu-cpu --erf_output nodes1_DD_GPUCPU_429161.erf /g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt//osu_latency -d cuda D D
++ set +x
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@lassen710>
+Subject: Job 429161: <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; #bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/;bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/; module swap cuda cuda/10.1.168; set -x;jsrArgs="--tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40";mpiArgs="--smpiargs='-gpu'";binArgs="-d cuda";out=nodes${CWS_NODES}_DD_GPUGPU_$LSB_JOBID;jsrun $jsrArgs $mpiArgs --latency_priority gpu-gpu --erf_output ${out}.erf \;  $bin/osu_latency $binArgs D D &> ${out}.out;out=nodes${CWS_NODES}_DD_GPUCPU_$LSB_JOBID;jsrun $jsrArgs $mpiArgs --latency_priority gpu-cpu --erf_output ${out}.erf \;  $bin/osu_latency $binArgs D D &> ${out}.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H D &> nodes${CWS_NODES}_HD_$LSB_JOBID.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs D H &> nodes${CWS_NODES}_DH_$LSB_JOBID.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H H &> nodes${CWS_NODES}_HH_$LSB_JOBID.out;set +x> in cluster <lassen> Done
+
+Job <#!/bin/bash;#BSUB -W 20;#BSUB -G ceed; check_sierra_nodes; #bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/;bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/; module swap cuda cuda/10.1.168; set -x;jsrArgs="--tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40";mpiArgs="--smpiargs='-gpu'";binArgs="-d cuda";out=nodes${CWS_NODES}_DD_GPUGPU_$LSB_JOBID;jsrun $jsrArgs $mpiArgs --latency_priority gpu-gpu --erf_output ${out}.erf \;  $bin/osu_latency $binArgs D D &> ${out}.out;out=nodes${CWS_NODES}_DD_GPUCPU_$LSB_JOBID;jsrun $jsrArgs $mpiArgs --latency_priority gpu-cpu --erf_output ${out}.erf \;  $bin/osu_latency $binArgs D D &> ${out}.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H D &> nodes${CWS_NODES}_HD_$LSB_JOBID.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs D H &> nodes${CWS_NODES}_DH_$LSB_JOBID.out;#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H H &> nodes${CWS_NODES}_HH_$LSB_JOBID.out;set +x> was submitted from host <lassen709> by user <smith516> in cluster <lassen> at Wed Jul 31 11:59:35 2019
+Job was executed on host(s) <1*lassen710>, in queue <pdebug>, as user <smith516> in cluster <lassen> at Wed Jul 31 11:59:37 2019
+                            <40*lassen2>
+</g/g19/smith516> was used as the home directory.
+</g/g19/smith516/develop/osu-micro-benchmarks-5.6.1> was used as the working directory.
+Started at Wed Jul 31 11:59:37 2019
+Terminated at Wed Jul 31 11:59:59 2019
+Results reported at Wed Jul 31 11:59:59 2019
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -W 20
+#BSUB -G ceed
+
+check_sierra_nodes
+
+#bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/
+bin=/g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt/
+
+module swap cuda cuda/10.1.168
+
+set -x
+jsrArgs="--tasks_per_rs 2 --nrs 1 --gpu_per_rs 4 --cpu_per_rs 40"
+mpiArgs="--smpiargs='-gpu'"
+binArgs="-d cuda"
+out=nodes${CWS_NODES}_DD_GPUGPU_$LSB_JOBID
+jsrun $jsrArgs $mpiArgs --latency_priority gpu-gpu --erf_output ${out}.erf \
+  $bin/osu_latency $binArgs D D &> ${out}.out
+out=nodes${CWS_NODES}_DD_GPUCPU_$LSB_JOBID
+jsrun $jsrArgs $mpiArgs --latency_priority gpu-cpu --erf_output ${out}.erf \
+  $bin/osu_latency $binArgs D D &> ${out}.out
+#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H D &> nodes${CWS_NODES}_HD_$LSB_JOBID.out
+#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs D H &> nodes${CWS_NODES}_DH_$LSB_JOBID.out
+#jsrun $jsrArgs $mpiArgs $bin/osu_latency $binArgs H H &> nodes${CWS_NODES}_HH_$LSB_JOBID.out
+set +x
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.27 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   21 sec.
+    Turnaround time :                            24 sec.
+
+The output (if any) is above this job summary.
+

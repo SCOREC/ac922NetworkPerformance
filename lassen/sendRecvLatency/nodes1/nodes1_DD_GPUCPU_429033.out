@@ -1,0 +1,35 @@
+rank   0 of   2 on lassen7
+allocate_device_buffer 4194304
+rank   1 of   2 on lassen7
+allocate_device_buffer 4194304
+allocate_device_buffer 4194304
+allocate_device_buffer 4194304
+process_options arg d
+# OSU MPI-CUDA Latency Test v5.6.1
+# Send Buffer on DEVICE (D) and Receive Buffer on DEVICE (D)
+# Size          Latency (us)
+0                       0.31
+1                      18.49
+2                      18.45
+4                      18.41
+8                      18.41
+16                     18.41
+32                     18.41
+64                     18.41
+128                    18.41
+256                    18.43
+512                    18.42
+1024                   18.40
+2048                   18.42
+4096                   18.42
+8192                   18.44
+16384                  18.34
+32768                  18.43
+65536                  18.61
+131072                 19.57
+262144                 21.47
+524288                 25.16
+1048576                32.75
+2097152                47.83
+4194304                78.46
+process_options arg d

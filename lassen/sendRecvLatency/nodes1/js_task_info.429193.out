@@ -1,0 +1,2 @@
+Task 1 ( 1/2, 1/2 ) is bound to cpu[s] 4-7 on host lassen11 with OMP_NUM_THREADS=4 and with OMP_PLACES={4:4} and CUDA_VISIBLE_DEVICES=0
+Task 0 ( 0/2, 0/2 ) is bound to cpu[s] 0-3 on host lassen11 with OMP_NUM_THREADS=4 and with OMP_PLACES={0:4} and CUDA_VISIBLE_DEVICES=0

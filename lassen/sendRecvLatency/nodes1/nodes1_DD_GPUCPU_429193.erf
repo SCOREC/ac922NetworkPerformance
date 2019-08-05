@@ -1,0 +1,12 @@
+app 0: /g/g19/smith516/develop/osu-micro-benchmarks-5.6.1/xl19-cuda101168-spectrum-install/libexec/osu-micro-benchmarks/mpi/pt2pt//osu_latency -d cuda D D 
+cpu_index_using: logical
+overlapping_rs: warn
+skip_missing_cpu: warn
+skip_missing_gpu: allow
+skip_missing_mem: allow
+oversubscribe_cpu: warn
+oversubscribe_gpu: allow
+oversubscribe_mem: allow
+launch_distribution: cyclic
+rank: 0: { host: 1; cpu: {0-3}, {4-7} ; gpu: {0} ; mem: {0-11885} } : app 0
+rank: 1: { host: 1; cpu: {4-7}, {0-3} ; gpu: {0} ; mem: {0-11885} } : app 0
