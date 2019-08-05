@@ -1,0 +1,25 @@
+FATAL ERROR: dlopen libcudart.so: libcudart.so: cannot open shared object file: No such file or directory
+FATAL ERROR: dlopen libcudart.so: libcudart.so: cannot open shared object file: No such file or directory
+FATAL ERROR: dlopen libcudart.so: libcudart.so: cannot open shared object file: No such file or directory
+FATAL ERROR: dlopen libcudart.so: libcudart.so: cannot open shared object file: No such file or directory
+[dcs16.ccni.rpi.edu:104924] Error: common_pami.c:1049 - ompi_common_pami_init() Unable to create PAMI client (rc=1)
+--------------------------------------------------------------------------
+No components were able to be opened in the pml framework.
+
+This typically means that either no components of this type were
+installed, or none of the installed components can be loaded.
+Sometimes this means that shared libraries required by these
+components are unable to be found/loaded.
+
+  Host:      dcs16
+  Framework: pml
+--------------------------------------------------------------------------
+[dcs16.ccni.rpi.edu:104924] PML pami cannot be selected
+[dcs16.ccni.rpi.edu:104903] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2079
+[dcs16.ccni.rpi.edu:104903] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2079
+[dcs16.ccni.rpi.edu:104903] PMIX ERROR: UNREACHABLE in file server/pmix_server.c at line 2079
+[dcs16.ccni.rpi.edu:104922] Error: common_pami.c:1049 - ompi_common_pami_init() Unable to create PAMI client (rc=1)
+[dcs16.ccni.rpi.edu:104923] Error: common_pami.c:1049 - ompi_common_pami_init() Unable to create PAMI client (rc=1)
+[dcs16.ccni.rpi.edu:104925] Error: common_pami.c:1049 - ompi_common_pami_init() Unable to create PAMI client (rc=1)
+[dcs16.ccni.rpi.edu:104903] 3 more processes have sent help message help-mca-base.txt / find-available:none found
+[dcs16.ccni.rpi.edu:104903] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages

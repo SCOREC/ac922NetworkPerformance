@@ -1,0 +1,74 @@
+
+# OSU MPI-CUDA Allreduce Latency Test v5.6.1
+# Size       Avg Latency(us)
+[dcs16:105131] *** Process received signal ***
+[dcs16:105131] Signal: Segmentation fault (11)
+[dcs16:105131] Signal code: Address not mapped (1)
+[dcs16:105131] Failing at address: 0x7fff53200000
+[dcs16:105129] *** Process received signal ***
+[dcs16:105129] Signal: Segmentation fault (11)
+[dcs16:105129] Signal code: Address not mapped (1)
+[dcs16:105129] Failing at address: 0x7fff73200000
+[dcs16:105129] [ 0] [dcs16:105128] *** Process received signal ***
+[dcs16:105128] Signal: Segmentation fault (11)
+[dcs16:105128] Signal code: Address not mapped (1)
+[dcs16:105128] Failing at address: 0x7fff73200000
+[dcs16:105131] [ 0] [0x7fff8f5304d8]
+[dcs16:105131] [ 1] [dcs16:105130] *** Process received signal ***
+[dcs16:105130] Signal: Segmentation fault (11)
+[dcs16:105130] Signal code: Address not mapped (1)
+[dcs16:105130] Failing at address: 0x7fff33200000
+[0x7fffae9f04d8]
+[dcs16:105129] [ 1] [dcs16:105128] [ 0] [0x7fffb11304d8]
+[dcs16:105128] [ 1] [dcs16:105130] [ 0] [0x7fff7f0604d8]
+[dcs16:105130] [ 1] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS8_11TopologyMapEEES6_E7restartEPv+0x1f0)[0x7fffa2fa5850]
+[dcs16:105129] [ 2] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS8_11TopologyMapEEES6_E7restartEPv+0x1f0)[0x7fff83ae5850]
+[dcs16:105131] [ 2] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS8_11TopologyMapEEES6_E7restartEPv+0x1f0)[0x7fff73615850]
+[dcs16:105130] [ 2] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS8_11TopologyMapEEES6_E7restartEPv+0x1f0)[0x7fffa16d5850]
+[dcs16:105128] [ 2] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce16ProtocolFactoryTINS1_19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS9_11TopologyMapEEES7_EES7_L19libcoll_xfer_type_t1EE8generateEPvSG_+0x7a4)[0x7fff73617104]
+[dcs16:105130] [ 3] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce16ProtocolFactoryTINS1_19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS9_11TopologyMapEEES7_EES7_L19libcoll_xfer_type_t1EE8generateEPvSG_+0x7a4)[0x7fff83ae7104]
+[dcs16:105131] [ 3] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce16ProtocolFactoryTINS1_19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS9_11TopologyMapEEES7_EES7_L19libcoll_xfer_type_t1EE8generateEPvSG_+0x7a4)[0x7fffa2fa7104]
+[dcs16:105129] [ 3] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN4CCMI9Protocols9Allreduce16ProtocolFactoryTINS1_19HybridOATCompositeTINS_8Executor16HybridAllreduceTINS_17ConnectionManager16RankBasedConnMgrEEENS_8Schedule16MultinomialTreeTINS9_11TopologyMapEEES7_EES7_L19libcoll_xfer_type_t1EE8generateEPvSG_+0x7a4)[0x7fffa16d7104]
+[dcs16:105128] [ 3] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN7LibColl7Adapter20StaticCollSelAdviser10autoSelectE19libcoll_xfer_type_tP14libcoll_xfer_tb+0x1d0)[0x7fff7356b810]
+[dcs16:105130] [ 4] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN7LibColl7Adapter20StaticCollSelAdviser10autoSelectE19libcoll_xfer_type_tP14libcoll_xfer_tb+0x1d0)[0x7fff83a3b810]
+[dcs16:105131] [ 4] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN7LibColl7Adapter20StaticCollSelAdviser10autoSelectE19libcoll_xfer_type_tP14libcoll_xfer_tb+0x1d0)[0x7fffa162b810]
+[dcs16:105128] [ 4] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(_ZN7LibColl7Adapter20StaticCollSelAdviser10autoSelectE19libcoll_xfer_type_tP14libcoll_xfer_tb+0x1d0)[0x7fffa2efb810]
+[dcs16:105129] [ 4] /opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(LIBCOLL_AutoSelect+0x58)[0x7fff73551798]
+[dcs16:105130] [ 5] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(start_libcoll_blocking_collective+0x3d8)[0x7fff7383cfc8]
+[dcs16:105130] [ 6] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(mca_coll_ibm_allreduce+0x1b0)[0x7fff7383ec70]
+[dcs16:105130] [ 7] /opt/ibm/spectrum_mpi/lib/libmpi_ibm.so.3(PMPI_Allreduce+0x250)[0x7fff7deb0ed0]
+[dcs16:105130] [ 8] /gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce[0x10002374]
+[dcs16:105130] [ 9] /usr/lib64/libc.so.6(+0x25200)[0x7fff7d965200]
+[dcs16:105130] [10] /usr/lib64/libc.so.6(__libc_start_main+0xc4)[0x7fff7d9653f4]
+[dcs16:105130] *** End of error message ***
+/opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(LIBCOLL_AutoSelect+0x58)[0x7fffa2ee1798]
+[dcs16:105129] [ 5] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(start_libcoll_blocking_collective+0x3d8)[0x7fffa31ccfc8]
+[dcs16:105129] [ 6] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(mca_coll_ibm_allreduce+0x1b0)[0x7fffa31cec70]
+[dcs16:105129] [ 7] /opt/ibm/spectrum_mpi/lib/libmpi_ibm.so.3(PMPI_Allreduce+0x250)[0x7fffad840ed0]
+[dcs16:105129] [ 8] /gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce[0x10002374]
+[dcs16:105129] [ 9] /usr/lib64/libc.so.6(+0x25200)[0x7fffad2f5200]
+[dcs16:105129] [10] /usr/lib64/libc.so.6(__libc_start_main+0xc4)[0x7fffad2f53f4]
+[dcs16:105129] *** End of error message ***
+/opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(LIBCOLL_AutoSelect+0x58)[0x7fffa1611798]
+[dcs16:105128] [ 5] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(start_libcoll_blocking_collective+0x3d8)[0x7fffa18fcfc8]
+[dcs16:105128] [ 6] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(mca_coll_ibm_allreduce+0x1b0)[0x7fffa18fec70]
+[dcs16:105128] [ 7] /opt/ibm/spectrum_mpi/lib/libmpi_ibm.so.3(PMPI_Allreduce+0x250)[0x7fffaff80ed0]
+[dcs16:105128] [ 8] /gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce[0x10002374]
+[dcs16:105128] [ 9] /usr/lib64/libc.so.6(+0x25200)[0x7fffafa35200]
+[dcs16:105128] [10] /usr/lib64/libc.so.6(__libc_start_main+0xc4)[0x7fffafa353f4]
+[dcs16:105128] *** End of error message ***
+/opt/ibm/spectrum_mpi/lib/pami_port/libcollectives.so.3(LIBCOLL_AutoSelect+0x58)[0x7fff83a21798]
+[dcs16:105131] [ 5] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(start_libcoll_blocking_collective+0x3d8)[0x7fff83d0cfc8]
+[dcs16:105131] [ 6] /opt/ibm/spectrum_mpi/lib/spectrum_mpi/mca_coll_ibm.so(mca_coll_ibm_allreduce+0x1b0)[0x7fff83d0ec70]
+[dcs16:105131] [ 7] /opt/ibm/spectrum_mpi/lib/libmpi_ibm.so.3(PMPI_Allreduce+0x250)[0x7fff8e380ed0]
+[dcs16:105131] [ 8] /gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce[0x10002374]
+[dcs16:105131] [ 9] /usr/lib64/libc.so.6(+0x25200)[0x7fff8de35200]
+[dcs16:105131] [10] /usr/lib64/libc.so.6(__libc_start_main+0xc4)[0x7fff8de353f4]
+[dcs16:105131] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 2 with PID 0 on node dcs16 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------

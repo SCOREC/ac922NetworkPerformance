@@ -1,0 +1,2 @@
++ mpirun -gpu -hostfile /tmp/hosts.6830 -np 4 /gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective/osu_allreduce -d cuda
++ set +x
