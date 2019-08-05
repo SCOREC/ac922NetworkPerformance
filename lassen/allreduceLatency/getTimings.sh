@@ -10,10 +10,10 @@ for i in {2..7}; do
     grep '^[0-9]' $f | awk '{print $1}' >> sizes
     pasteargs="$pasteargs sizes"
   fi
-  echo $n > ${n}
-  grep '^[0-9]' $f | awk '{print $2}' >> ${n}
+  echo $t > ${t}
+  grep '^[0-9]' $f | awk '{print $2}' >> ${t}
   count=$((count+1))
-  pasteargs="$pasteargs $n"
+  pasteargs="$pasteargs $t"
 done
 paste -d "," $pasteargs > all.csv
 rm $pasteargs

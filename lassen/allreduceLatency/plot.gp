@@ -6,4 +6,5 @@ set logscale y
 set xlabel "message size (B)"
 set ylabel "time (us)"
 set title "Lassen AllReduce Latency"
+set key title "GPUs"
 p for [col=2:7] 'all.csv' using 1:col with lp t col
