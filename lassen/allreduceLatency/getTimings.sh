@@ -16,3 +16,4 @@ for i in {2..7}; do
   pasteargs="$pasteargs $n"
 done
 paste -d "," $pasteargs > all.csv
+rm $pasteargs
