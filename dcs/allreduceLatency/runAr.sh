@@ -4,7 +4,6 @@ source ../env.sh
 
 bin=/gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective
 
-#!/bin/bash -x 
 srun hostname -s > /tmp/hosts.$SLURM_JOB_ID
 if [ "x$SLURM_NPROCS" = "x" ] 
 then
