@@ -11,19 +11,23 @@
 #include <osu_util_mpi.h>
 #include <malloc.h>
 
-static double get_peak()
-{
-  return mallinfo().arena;
-}
-
 static double get_chunks()
 {
   struct mallinfo m = mallinfo();
   return m.uordblks + m.hblkhd;
 }
 
+void recordMemUsage(double* use) { 
+  double m = get_chunks();
+  if(m<use[0]) use[0] = m;
+  if(m>use[1]) use[1] = m;
+}
+
 int main(int argc, char *argv[])
 {
+
+
+    double memUsage[2] = {INT_MAX,0}; //min, max
     int i, numprocs, rank, size;
     double latency = 0.0, t_start = 0.0, t_stop = 0.0;
     double timer=0.0;
@@ -51,7 +55,7 @@ int main(int argc, char *argv[])
     MPI_CHECK(MPI_Comm_rank(MPI_COMM_WORLD, &rank));
     MPI_CHECK(MPI_Comm_size(MPI_COMM_WORLD, &numprocs));
 
-    fprintf(stderr, "%d malloc used 1 %f\n", rank, get_chunks());
+    recordMemUsage(memUsage);
 
     switch (po_ret) {
         case PO_BAD_USAGE:
@@ -109,7 +113,6 @@ int main(int argc, char *argv[])
 
     print_preamble(rank);
 
-    fprintf(stderr, "%d malloc used 2 %f\n", rank, get_chunks());
 
     for (size=options.min_message_size; size*sizeof(float) <= options.max_message_size; size *= 2) {
 
@@ -130,6 +133,8 @@ int main(int argc, char *argv[])
             t_start = MPI_Wtime();
             MPI_CHECK(MPI_Allreduce(sendbuf, recvbuf, size, MPI_FLOAT, MPI_SUM, MPI_COMM_WORLD ));
             t_stop=MPI_Wtime();
+         
+            recordMemUsage(memUsage);
 
             if (options.validate) {
                 errors += validate_reduction(recvbuf, size, i, numprocs, options.accel);
@@ -159,10 +164,14 @@ int main(int argc, char *argv[])
         MPI_CHECK(MPI_Barrier(MPI_COMM_WORLD));
     }
 
-    fprintf(stderr, "%d malloc used 3 %f\n", rank, get_chunks());
+    recordMemUsage(memUsage);
 
     free_buffer(sendbuf, options.accel);
     free_buffer(recvbuf, options.accel);
+
+    recordMemUsage(memUsage);
+
+    fprintf(stderr, "%d malloc used min max %f %f\n", rank, memUsage[0], memUsage[1]);
 
     MPI_CHECK(MPI_Finalize());
 
