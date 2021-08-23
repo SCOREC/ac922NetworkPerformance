@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../env.sh
+module load spectrum-mpi/10.3
 
 bin=/gpfs/u/barn/CCNI/shared/CWS/ac922NetworkPerformance/osu-micro-benchmarks-5.6.1/xl161-cuda100-spectrum-install/libexec/osu-micro-benchmarks/mpi/collective
 
@@ -16,6 +16,8 @@ fi
 
 out=ar_n${SLURM_JOB_NUM_NODES}t${SLURM_NPROCS}.${SLURM_JOB_ID}.out
 set -x
+mpirun -gpu -hostfile /tmp/hosts.$SLURM_JOB_ID -np 1 \
+  env &> computeEnv.txt
 mpirun -gpu -hostfile /tmp/hosts.$SLURM_JOB_ID -np $SLURM_NPROCS \
   $bin/osu_allreduce -d cuda &> $out
 set +x
