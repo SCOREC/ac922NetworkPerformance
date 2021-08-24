@@ -17,7 +17,7 @@ fi
 out=ar_n${SLURM_JOB_NUM_NODES}t${SLURM_NPROCS}.${SLURM_JOB_ID}.out
 outGpu=arGpu_n${SLURM_JOB_NUM_NODES}t${SLURM_NPROCS}.${SLURM_JOB_ID}.out
 set -x
-mpirun -gpu -hostfile /tmp/hosts.$SLURM_JOB_ID -np 1 \
+mpirun --bind-to core -hostfile /tmp/hosts.$SLURM_JOB_ID -np 1 \
   env &> computeEnvRhel8.txt
 mpirun --bind-to core -hostfile /tmp/hosts.$SLURM_JOB_ID -np $SLURM_NPROCS \
   $bin/osu_allreduce &> $out
