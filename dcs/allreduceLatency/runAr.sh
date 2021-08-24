@@ -2,7 +2,7 @@
 
 module load spectrum-mpi/10.4
 
-bin=/gpfs/u/home/CCNI/CCNIsmth/barn-shared/CWS/ac922NetworkPerformance/build-osu-xl1611-spectrum104-cuda112/mpi/collective
+bin=/path/to/osu-microbenchmark/build/mpi/collective ##EDIT##
 
 srun hostname -s > /tmp/hosts.$SLURM_JOB_ID
 if [ "x$SLURM_NPROCS" = "x" ] 
