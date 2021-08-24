@@ -12,11 +12,14 @@ then
   SLURM_NPROCS=`expr $SLURM_JOB_NUM_NODES \* $SLURM_NTASKS_PER_NODE`
 fi
 
+export OMP_NUMTHREADS=${SLURM_NPROCS}
+export OMP_PROC_BIND=TRUE
+
 out=stream_n${SLURM_JOB_NUM_NODES}t${SLURM_NPROCS}.${SLURM_JOB_ID}.out
 set -x
 mpirun --bind-to core -hostfile /tmp/hosts.$SLURM_JOB_ID -np 1 \
   env &> computeEnvRhel8.txt
-mpirun --bind-to core -hostfile /tmp/hosts.$SLURM_JOB_ID -np $SLURM_NPROCS \
+mpirun --bind-to core -hostfile /tmp/hosts.$SLURM_JOB_ID -np 1 \
   ./stream &> $out
 set +x
 
